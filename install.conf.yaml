@@ -1,3 +1,18 @@
-- clean: []
-- link: {}
-- shell: []
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.config/:
+      create: true
+      glob: true
+      relink: true
+      path: config/*
+
+#- create:
+#  - ~/custom_folder
+
+#- shell:
+#  - [echo $HOME, Running command X]
