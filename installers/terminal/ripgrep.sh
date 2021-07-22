@@ -6,5 +6,10 @@ if [ "$PREP" -eq "1" ]; then
 	exit 0
 fi
 
+REPO=BurntSushi/ripgrep
+APP=ripgrep
+
 echo "Downloading and installing package for $0"
-apt install terminator -y
+sudo -u $USER gh release download --pattern '*.deb' --repo $REPO -D /tmp/$APP
+
+apt install /tmp/$APP/*.deb -y

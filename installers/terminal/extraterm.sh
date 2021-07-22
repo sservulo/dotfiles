@@ -6,5 +6,10 @@ if [ "$PREP" -eq "1" ]; then
 	exit 0
 fi
 
+REPO=sedwards2009/extraterm
+APP=extraterm
+
 echo "Downloading and installing package for $0"
-apt install terminator -y
+sudo -u $USER gh release download v0.59.2 --pattern '*.deb' --repo $REPO -D /tmp/$APP
+
+apt install /tmp/$APP/*.deb -y
