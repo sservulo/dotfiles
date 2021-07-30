@@ -1,0 +1,9 @@
+Added github cli [check auth process integration]
+Added ripgrep using gh cli
+Added extraterm [need to check release]
+Added neovim ppa for bionic release of ubuntu
+Added user and prep flags for subroutine calls
+Optimized apt source setup and updates
+
+TODO:
+Automate gh installation and setup
